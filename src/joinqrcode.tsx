@@ -1,8 +1,15 @@
 import * as React from 'react';
+
+declare module 'react' {
+	interface DeprecatedLifecycle<P, S> {
+		context: any;
+	}
+}
+
 import { QRCode } from 'react-qrcode-logo';
 import './css/qrcode.css';
-import { FlowComponent } from './models/FlowComponent';
-import { IManywho } from './models/interfaces';
+import { FlowComponent } from '/Operational Data/Flow UI Custom Components/2019 Version/FlowComponentModel/src/FlowComponent';
+import { IManywho } from '/Operational Data/Flow UI Custom Components/2019 Version/FlowComponentModel/src/interfaces';
 
 declare const manywho: IManywho;
 
